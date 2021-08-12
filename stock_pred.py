@@ -110,19 +110,19 @@ def main():
         #previous = pred_price
         
         
-        #previous_pred_price = X.at[str(input_date - datetime.timedelta(days=j)), 'Close']
-        previous_pred_price = X[i : i+1].values
+        previous_pred_price = X.at[str(input_date - datetime.timedelta(days=j)), 'Close']
+        #previous_pred_price = X[i : i+1].values
         #print(previous_pred_price)
         #print(previous_pred_price1)
         diff = (float)(pred_price - previous_pred_price)
         #print( diff )
-        #if (diff < 0):
+        if (diff < 0):
             #a=(str(np.round(((- (diff) / previous_pred_price) * 100), 2)))
-            #st.write("percentage decrease = ", str(np.round(((- (diff) / previous_pred_price) * 100), 2)))
-        #else:
-            #st.write("percentage increase = ", str(np.round((((diff) / previous_pred_price) * 100), 2)))
-        a=(str(np.round((( (diff) / previous_pred_price) * 100), 2)))
-        st.write("percentage = ", a)
+            st.write("percentage decrease = ", str(np.round(((- (diff) / previous_pred_price) * 100), 2)))
+        else:
+            st.write("percentage increase = ", str(np.round((((diff) / previous_pred_price) * 100), 2)))
+        #a=(str(np.round((( (diff) / previous_pred_price) * 100), 2)))
+        #st.write("percentage = ", a)
     else:
         st.error(
             'Error: Either the date is above the last date of the dataset OR below the start date + 40 days of the dataset. Please enter a date between or equal to {} and {} !!'.format(
