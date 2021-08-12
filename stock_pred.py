@@ -117,10 +117,13 @@ def main():
         diff = (float)(pred_price - previous_pred_price)
         #print( diff )
         if (diff < 0):
-            #a=(str(np.round(((- (diff) / previous_pred_price) * 100), 2)))
-            st.write("percentage decrease = ", str(np.round(((- (diff) / previous_pred_price) * 100), 2)))
+            a=(str(np.round(((- (diff) / previous_pred_price) * 100), 2)))
+            a=str(a)[2:-2]
+            st.write("percentage decrease = ", a)
         else:
-            st.write("percentage increase = ", str(np.round((((diff) / previous_pred_price) * 100), 2)))
+            a=(str(np.round((( (diff) / previous_pred_price) * 100), 2)))
+            a=str(a)[2:-2]
+            st.write("percentage increase = ", a))
         #a=(str(np.round((( (diff) / previous_pred_price) * 100), 2)))
         #st.write("percentage = ", a)
     else:
