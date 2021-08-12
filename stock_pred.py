@@ -123,7 +123,7 @@ def main():
         else:
             a=(str(np.round((( (diff) / previous_pred_price) * 100), 2)))
             a=str(a)[2:-2]
-            st.write("percentage increase = ", a))
+            st.write("percentage increase = ", a)
         #a=(str(np.round((( (diff) / previous_pred_price) * 100), 2)))
         #st.write("percentage = ", a)
     else:
