@@ -104,14 +104,14 @@ def main():
         pred_price = scaler.inverse_transform(result)
         #print(pred_price)
 
-        st.success("Predicted Close Price for {} is ${}".format(input_date, pred_price))
+        st.success("Predicted Close Price for {} is ${}".format(input_date, str(pred_price)[2:-2]))
 
         # Percentage increase or decrease in Closed Price
         #previous = pred_price
         
         
-        previous_pred_price = X.at[str(input_date - datetime.timedelta(days=j)), 'Close']
-        #previous_pred_price = X[i : i+1].values
+        #previous_pred_price = X.at[str(input_date - datetime.timedelta(days=j)), 'Close']
+        previous_pred_price = X[i : i+1].values
         #print(previous_pred_price)
         #print(previous_pred_price1)
         diff = (float)(pred_price - previous_pred_price)
