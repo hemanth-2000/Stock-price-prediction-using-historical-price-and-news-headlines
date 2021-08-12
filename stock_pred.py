@@ -13,7 +13,7 @@ import datetime
 #from datetime import datetime, timedelta
 #import time
 
-model = keras.models.load_model(r"C:\Users\hemua\Desktop\stock\model.h5")
+model = keras.models.load_model("model.h5")
 
 
 def welcome():
@@ -37,7 +37,7 @@ def main():
     #dateparse = lambda dates: [pd.datetime.strptime(d, '%Y-%m-%d %H:%M:%S') for d in dates]
     #dateparse = lambda x: datetime.strptime(x, '%Y-%m-%d %H:%M:%S')
     #stock_data = pd.read_csv(r'C:\Users\hemua\Desktop\stock\stock_data.csv', parse_dates=['Date'], date_parser=dateparse)
-    stock_data = pd.read_csv(r'C:\Users\hemua\Desktop\stock\stock_dat.csv' , parse_dates=['Date'])
+    stock_data = pd.read_csv('stock_dat.csv' , parse_dates=['Date'])
     #stock_data['Date'] = pd.Timestamp(stock_data['Date'])
     #stock_data['Date'] = pd.to_datetime(stock_data['Date'], format="%m/%d/%y",infer_datetime_format=True)
     #print(stock_data.dtypes)
