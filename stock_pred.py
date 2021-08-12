@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 from sklearn.preprocessing import MinMaxScaler
-import keras
+from tensorflow import keras
 import datetime
 
 model = keras.models.load_model(r"C:\Users\hemua\Desktop\model.h5")
